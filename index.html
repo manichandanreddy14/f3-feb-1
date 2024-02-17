@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #timer{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #header{
+            text-align: center;
+        }
+        #hh,#mm,#ss{
+            width: 50px;
+            gap: 30px;
+        }
+        #txt{
+            
+            margin-right: 50px;
+        }
+        #bt{
+            margin-left: 50px;
+        }
+        #timer{
+            background-color: red;
+            align-items: center;
+            justify-content: center;
+            padding-inline: 30px;
+            width: 500px;
+            margin-inline: 200px;
+            margin-top:100px;
+            background-color: #34344A;
+        }
+        #bt{
+            background-color:yellow;
+        }
+        #current-timer{
+            margin-inline: 45%;
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        #current-timer{
+            display: flex;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="timer-input-section">
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" min="0" placeholder="0" required>
+        
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" min="0" max="59" placeholder="0" required>
+        
+        <label for="seconds">Seconds:</label>
+        <input type="number" id="seconds" min="0" max="59" placeholder="0" required>
+        
+        <button id="startTimerButton">Start New Timer</button>
+      </div>
+      
+      <div id="active-timers-section"></div>
+    
+      <audio id="timer-alert" src="alert-sound.mp3" preload="auto"></audio>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
